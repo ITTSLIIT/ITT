@@ -1,0 +1,96 @@
+<?php echo $this->doctype(); ?>
+
+<html lang="en">
+<head>
+<meta charset="utf-8">
+      
+        <?php echo $this->headMeta()->appendName('viewport', 'width=device-width, initial-scale=1.0  maximum-scale=1, user-scalable=no')?>
+
+        <!-- Le styles -->
+        <?php
+								
+								echo $this->headLink ( array ('rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath () . '/img/logo2.jpg' ) )->prependStylesheet ( $this->basePath () . '/css/bootstrap.css' )->prependStylesheet ( $this->basePath () . '/css/simple-sidebar.css' )->prependStylesheet ( $this->basePath () . '/css/fv.css' )?>
+
+
+								
+       
+
+    </head>
+<body>
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header" style="padding-left: 90px">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<img src="<?php echo $this->basePath('/img/logo2.jpg'); ?>"
+					alt="..." class="img-circle">
+
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse"
+				id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<li class=""><a href="#" style="text-decoration: none;">Dashboard</a></li>
+					<li><a href="#" style="text-decoration: none;">Projects</a></li>
+					<li><a href="#" style="text-decoration: none;">Issue</a></li>
+
+					<!-- <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>-->
+				</ul>
+
+				<ul class="nav navbar-nav" style="padding-left: 600px">
+					<form class="navbar-form navbar-left" role="search">
+						<img src="<?php echo $this->basePath('/img/logo2.jpg'); ?>"
+							alt="..." class="img-thumbnail" style="height: 30px">
+					</form>
+					<li><a href="#" style="text-decoration: none;">Log out</a></li>
+			
+			</div>
+			<!-- /.container-fluid -->
+		</div>
+
+
+	</nav>
+
+	<!-- Sidebar -->
+	<div id="sidebar-wrapper">
+		<ul class="sidebar-nav">
+			<li class="sidebar-brand"><a></a></li>
+			<li><a href="#">Dashboard</a></li>
+			<li><a href="#">Shortcuts</a></li>
+			<li><a href="#">Overview</a></li>
+			<li><a href="#">Events</a></li>
+			<li><a href="#">About</a></li>
+			<li><a href="#">Services</a></li>
+			<li><a href="#">Contact</a></li>
+		</ul>
+	</div>
+	<div class="container">
+
+		<hr>
+           <?php echo $this->content; ?>
+        <?php echo $this->inlineScript()?>
+    
+
+
+
+
+
+</body>
+</html>
